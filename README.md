@@ -15,9 +15,11 @@
 
    `yarn install`
 
-5. 3000포트로 실행
+5. 실행
 
    `yarn run start`
+
+<br />
 
 ## 🎁 구현 방법
 
@@ -28,7 +30,7 @@
 - 구현 방법
   - isToggleOn상태 변수(`useState`)를 `boolean`값으로 만들어서 클릭 시마다 `true`↔️ `false`로 바뀌게 함 (toggleHandler 메서드)
 - 어려웠던 점
-  - 토글 버튼 배경에 색을 직선으로 채우는 UI구현이 어려웠음
+  - 토글 버튼 배경에 색을 직선으로 채우는 UI구현이 어려웠음 <br />
     👉 background속성에서 linear-gradient를 사용함으로써 해결함
 
 ### ✅ Tab.js
@@ -53,7 +55,7 @@
   - isEditMode상태 변수를 통해 edit모드 활성화 시 `input`에 포커스 줌(`useEffect`)
   - `input`외 다른 부분 클릭 시(`onBlur`) edit모드를 비활성화로 만들고 새로 입력된 값(newValue)을 부모 컴포넌트의 상태 변수에 저장
 - 어려웠던 점
-  - input외 다른 부분 클릭시 이벤트주는 부분
+  - input외 다른 부분 클릭시 이벤트주는 부분 <br />
     👉 onBlur이벤트 사용
 
 ### ✅ Modal.js
@@ -63,7 +65,7 @@
   - openModalHandler메서드를 통해 `isModalOpen` 의 값이 `true`↔️ `false` 로 바뀌게 구현함
   - 모달 버튼에 열기 전에는 “Open Modal”을, 모달 연 후엔 “Opened!”가 보이도록 함
 - 어려웠던 점
-  - 띄워진 모달창 내부를 클릭해도 모달이 닫히는 문제
+  - 띄워진 모달창 내부를 클릭해도 모달이 닫히는 문제 <br />
     👉 `event.stopPropagation()` 를 모달 뷰영역의 `onClick`으로 사용하여 자식 컴포넌트의 작동을 막음
 
 ### ✅ AutoComplete.js
